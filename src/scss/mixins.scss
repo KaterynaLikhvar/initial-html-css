@@ -1,0 +1,6 @@
+@mixin breakpoint($tab) {
+
+  @media screen and (max-width: $tab) {
+    @content;
+  }
+}
