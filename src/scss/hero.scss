@@ -1,0 +1,17 @@
+.hero {
+	display: flex;
+	.hero__col {
+		width: 50%;
+	
+		&_left {
+			height: 1000px;
+			background:
+				url(/images/hero-digital_s.svg) -20px 100%,
+				url(/images/hero-digital_l.svg) 30px 100%,
+				url(/images/hero-products_s.svg) 68% 0,
+				url(/images/hero-products_l.svg) 82% 0,
+				url(/images/hero-main.svg);
+			background-repeat: no-repeat;
+		}
+	}
+}

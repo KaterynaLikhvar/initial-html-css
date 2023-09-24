@@ -1,0 +1,13 @@
+@import 'normalize.css';
+@import 'variables.scss';
+@import 'mixins.scss';
+
+@import './header.scss';
+@import 'hero.scss';
+
+.wrapper {
+	max-width: 1920px;
+	width: 100%;
+	margin: 0 auto;
+	background-color: $color-background;
+}
