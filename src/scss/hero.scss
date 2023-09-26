@@ -14,23 +14,44 @@
 				url(/images/hero-products_l.svg) 82% 0,
 				url(/images/hero-main.svg);
 			background-repeat: no-repeat;
+
+			@include breakpoint($tab_1248) {
+				background:
+				url(/images/hero-digital_s.svg) -20px 100%,
+				url(/images/hero-digital_l.svg) 30px 100%,
+				url(/images/hero-products_s.svg) 100% 100%,
+				url(/images/hero-products_l.svg) 82% 0,
+				url(/images/hero-main.svg);
+			background-repeat: no-repeat;
+			}
+
+			@include breakpoint($tab_1024) {
+        display: none;
+      }
+		}
+
+		&_right {
+			@include breakpoint($tab_1248) {
+				padding-left: 40px;
+			}
+
+			@include breakpoint($tab_1024) {
+        width: 100%;
+				padding-left: 0;
+      }
 		}
 	}
 
 	&__row {
-		
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-
-		@include breakpoint($tab_1024) {
-			padding-right: 20px;
-		}
 	}
 
 	.section-content {
-		padding: 320px 0 207px 80px;
+		padding: 320px 0 207px;
 	}
+
 	.slider {
 
 		&__buttons {
@@ -112,6 +133,15 @@
 				color: #FFF;
 				writing-mode: vertical-rl;
 				transform: rotate(180deg);
+			}
+		}
+
+		&__buttons,
+		&__scroll {
+			padding-right: 98px;
+
+			@include breakpoint($tab_1248) {
+				padding-right: 40px;
 			}
 		}
 	}
