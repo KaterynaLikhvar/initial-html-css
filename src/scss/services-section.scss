@@ -1,9 +1,21 @@
 .services {
-	padding: 16.25rem 1.875rem 14.375rem 11.25rem;
-	display: flex;
-	align-items: center;
+  position: relative;
+  padding: 16.25rem 1.875rem 14.375rem 11.25rem;
+  display: flex;
+  align-items: center;
+  background-color: $color-background;
 
-	.section-content {
-		margin-right: 64px;
-	}
+  @include breakpoint($tab_1248) {
+    flex-direction: column;
+    padding: 8.125rem 1.875rem;
+  }
+
+  .section-content {
+    margin-right: 4rem;
+
+    @include breakpoint($tab_1248) {
+      margin-right: 0;
+      margin-bottom: 4.375rem;
+    }
+  }
 }
