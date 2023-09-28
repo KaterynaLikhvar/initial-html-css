@@ -1,152 +1,136 @@
-@import './mixins.scss';
+@import "./mixins.scss";
 .hero {
-	display: flex;
+  display: flex;
 
-	&__col {
-		width: 50%;
+  &__col {
+    width: 50%;
 
-		&_left {
-			height: 1000px;
-			background:
-				url(/images/hero-digital_s.svg) -20px 100%,
-				url(/images/hero-digital_l.svg) 30px 100%,
-				url(/images/hero-products_s.svg) 68% 0,
-				url(/images/hero-products_l.svg) 82% 0,
-				url(/images/hero-main.svg);
-			background-repeat: no-repeat;
+    &_left {
+      position: relative;
+    }
 
-			@include breakpoint($tab_1248) {
-				background:
-				url(/images/hero-digital_s.svg) -20px 100%,
-				url(/images/hero-digital_l.svg) 30px 100%,
-				url(/images/hero-products_s.svg) 100% 100%,
-				url(/images/hero-products_l.svg) 82% 0,
-				url(/images/hero-main.svg);
-			background-repeat: no-repeat;
-			}
-
-			@include breakpoint($tab_1024) {
-        display: none;
+    &_right {
+      @include breakpoint($tab_1248) {
+        padding-left: 2.5rem;
       }
-		}
 
-		&_right {
-			@include breakpoint($tab_1248) {
-				padding-left: 40px;
-			}
-
-			@include breakpoint($tab_1024) {
+      @include breakpoint($tab_1024) {
         width: 100%;
-				padding-left: 0;
+        padding-left: 0;
       }
-		}
-	}
+    }
+  }
 
-	&__row {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
+  &__image {
+    width: 610px;
+    height: 1000px;
+    display: block;
 
-	.section-content {
-		padding: 320px 0 207px;
-	}
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
 
-	.slider {
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-		&__buttons {
+  .section-content {
+    padding: 20rem 0 12.938rem;
+  }
 
-			@include breakpoint($tab_1024) {
-        padding-left: 20px;
+  .slider {
+    &__buttons {
+      @include breakpoint($tab_1024) {
+        padding-left: 1.25rem;
       }
-			
-			
-			.button-arrow {
-				&__next {
-					margin-bottom: 40px;
-				}
-			}
-		}
 
-		&__pagination {
-			display: flex;
-			padding-left: 80px;
-			padding-bottom: 90px;
+      .button-arrow {
+        &__next {
+          margin-bottom: 2.5rem;
+        }
+      }
+    }
 
-			&-item {
-				position: relative;
-				display: flex;
-				align-items: center;
-				font-family: 'Mulish', sans-serif;
-				font-size: 1.125rem;
-				font-weight: 600;
-				line-height: 100%;
-				color: $color-text-on-dark;
+    &__pagination {
+      display: flex;
+      padding-left: 5rem;
+      padding-bottom: 5.625rem;
 
-				&::after {
-					content: '';
-					position: relative;
-					margin: 0 15px;
-					display: block;
-					width: 10px;
-					height: 1px;
-					background-color: #fff;
-					opacity: 0.2;
-				}
+      &-item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        font-family: "Mulish", sans-serif;
+        font-size: 1.125rem;
+        font-weight: 600;
+        line-height: 100%;
+        color: $color-text-on-dark;
 
-				&_active {
-					font-size: 1.5rem;
-					font-family: 'Mulish', sans-serif;
-					font-size: 24px;
-					font-weight: 600;
-					line-height: 100%;
+        &::after {
+          content: "";
+          position: relative;
+          margin: 0 15px;
+          display: block;
+          width: 10px;
+          height: 1px;
+          background-color: #fff;
+          opacity: 0.2;
+        }
 
-					&::after {
-						width: 70px;
-						opacity: 0.5;
-					}
-				}
-			}
-		}
+        &_active {
+          font-size: 1.5rem;
+          font-family: "Mulish", sans-serif;
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 100%;
 
-		&__scroll {
-			position: relative;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			
-			&::after {
-				content: '';
-				position: relative;
-				display: block;
-				margin-top: 12px;
-				width: 1px;
-				height: 10px;
-				opacity: 0.2;
-				background: $color-text-on-dark;
-			}
+          &::after {
+            width: 70px;
+            opacity: 0.5;
+          }
+        }
+      }
+    }
 
-			span {
-				font-family: 'Mulish', sans-serif;
-				font-size: 0.875rem;
-				line-height: 160%;
-				color: #FFF;
-				writing-mode: vertical-rl;
-				transform: rotate(180deg);
-			}
-		}
+    &__scroll {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-		&__buttons,
-		&__scroll {
-			padding-right: 98px;
+      &::after {
+        content: "";
+        position: relative;
+        display: block;
+        margin-top: 0.75rem;
+        width: 1px;
+        height: 10px;
+        opacity: 0.2;
+        background: $color-text-on-dark;
+      }
 
-			@include breakpoint($tab_1248) {
-				padding-right: 40px;
-			}
-		}
-	}
+      span {
+        font-family: "Mulish", sans-serif;
+        font-size: 0.875rem;
+        line-height: 160%;
+        color: #fff;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+      }
+    }
 
-	
+    &__buttons,
+    &__scroll {
+      padding-right: 6.125rem;
 
-
+      @include breakpoint($tab_1248) {
+        padding-right: 2.5rem;
+      }
+    }
+  }
 }
