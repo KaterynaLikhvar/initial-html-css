@@ -9,15 +9,34 @@
   z-index: 2;
 
   &__wrapper {
-    max-width: 1771px;
+    max-width: 1920px;
     width: 100%;
     margin: 0 auto;
+    padding: 0 5.625rem 0 3.75rem;
     display: flex;
     align-items: center;
     height: inherit;
   }
 
+  &-menu {
+    &__button {
+      width: 20px;
+      min-width: 20px;
+      height: 20px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='16' viewBox='0 0 20 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.8'%3E%3Crect y='2' width='2' height='2' rx='1' transform='rotate(-90 0 2)' fill='white'/%3E%3Crect y='9' width='2' height='2' rx='1' transform='rotate(-90 0 9)' fill='white'/%3E%3Crect y='16' width='2' height='2' rx='1' transform='rotate(-90 0 16)' fill='white'/%3E%3Crect x='15' y='2' width='10' height='2' rx='1' transform='rotate(180 15 2)' fill='white'/%3E%3Crect x='15' y='9' width='10' height='2' rx='1' transform='rotate(180 15 9)' fill='white'/%3E%3Crect x='15' y='16' width='10' height='2' rx='1' transform='rotate(180 15 16)' fill='white'/%3E%3Crect x='18' y='2' width='2' height='2' rx='1' transform='rotate(-90 18 2)' fill='white'/%3E%3Crect x='18' y='9' width='2' height='2' rx='1' transform='rotate(-90 18 9)' fill='white'/%3E%3Crect x='18' y='16' width='2' height='2' rx='1' transform='rotate(-90 18 16)' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-image: url("data:image/svg+xml,%3Csvg width='20' height='16' viewBox='0 0 20 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='1'%3E%3Crect y='2' width='2' height='2' rx='1' transform='rotate(-90 0 2)' fill='white'/%3E%3Crect y='9' width='2' height='2' rx='1' transform='rotate(-90 0 9)' fill='white'/%3E%3Crect y='16' width='2' height='2' rx='1' transform='rotate(-90 0 16)' fill='white'/%3E%3Crect x='15' y='2' width='10' height='2' rx='1' transform='rotate(180 15 2)' fill='white'/%3E%3Crect x='15' y='9' width='10' height='2' rx='1' transform='rotate(180 15 9)' fill='white'/%3E%3Crect x='15' y='16' width='10' height='2' rx='1' transform='rotate(180 15 16)' fill='white'/%3E%3Crect x='18' y='2' width='2' height='2' rx='1' transform='rotate(-90 18 2)' fill='white'/%3E%3Crect x='18' y='9' width='2' height='2' rx='1' transform='rotate(-90 18 9)' fill='white'/%3E%3Crect x='18' y='16' width='2' height='2' rx='1' transform='rotate(-90 18 16)' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+      }
+    }
+  }
+
   &__logo {
+    display: block;
     margin-left: 6.25rem;
     min-width: 120px;
     width: 120px;
@@ -26,6 +45,10 @@
 
   &__contact {
     margin-left: auto;
+
+    &:hover {
+      color: #ff455b;
+    }
 
     span {
       position: relative;
@@ -55,23 +78,21 @@
   &__button {
     margin-left: 3.125rem;
     padding: 0.625rem 2.5rem;
-    font-family: 'Mulish', sans-serif;
     font-size: 1rem;
     font-style: normal;
     font-weight: 600;
     line-height: 170%;
     color: #fff;
     border: 2px solid rgba(255, 255, 255, 0.5);
-  }
-}
 
-.burger-menu {
-  &__button {
-    width: 20px;
-    min-width: 20px;
-    height: 20px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url("data:image/svg+xml,%3Csvg width='20' height='16' viewBox='0 0 20 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.8'%3E%3Crect y='2' width='2' height='2' rx='1' transform='rotate(-90 0 2)' fill='white'/%3E%3Crect y='9' width='2' height='2' rx='1' transform='rotate(-90 0 9)' fill='white'/%3E%3Crect y='16' width='2' height='2' rx='1' transform='rotate(-90 0 16)' fill='white'/%3E%3Crect x='15' y='2' width='10' height='2' rx='1' transform='rotate(180 15 2)' fill='white'/%3E%3Crect x='15' y='9' width='10' height='2' rx='1' transform='rotate(180 15 9)' fill='white'/%3E%3Crect x='15' y='16' width='10' height='2' rx='1' transform='rotate(180 15 16)' fill='white'/%3E%3Crect x='18' y='2' width='2' height='2' rx='1' transform='rotate(-90 18 2)' fill='white'/%3E%3Crect x='18' y='9' width='2' height='2' rx='1' transform='rotate(-90 18 9)' fill='white'/%3E%3Crect x='18' y='16' width='2' height='2' rx='1' transform='rotate(-90 18 16)' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    &:active,
+    &:focus {
+      border: 2px solid rgba(255, 255, 255, 0.5);
+    }
+
+    &:hover {
+      background: linear-gradient(90deg, #ff455b 0%, #ff7245 100%);
+      border: 2px solid transparent;
+    }
   }
 }
