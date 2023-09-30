@@ -1,0 +1,134 @@
+@import './mixins.scss';
+.hero {
+  display: flex;
+
+  &__col {
+    width: 50%;
+
+    &_left {
+      position: relative;
+    }
+
+    &_right {
+      @include breakpoint($tab_1248) {
+        padding-left: 2.5rem;
+      }
+
+      @include breakpoint($tab_1024) {
+        width: 100%;
+        padding-left: 0;
+      }
+    }
+  }
+
+  &__image {
+    display: block;
+
+    img {
+      display: block;
+      max-width: 610px;
+      width: 100%;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .section-content {
+    padding: 20rem 0 12.938rem;
+  }
+
+  .slider {
+    &__buttons {
+      @include breakpoint($tab_1024) {
+        padding-left: 1.25rem;
+      }
+
+      .button-arrow {
+        &__next {
+          margin-bottom: 2.5rem;
+        }
+      }
+    }
+
+    &__pagination {
+      display: flex;
+      padding-left: 5rem;
+      padding-bottom: 5.625rem;
+
+      &-item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        font-family: 'Mulish', sans-serif;
+        font-size: 1.125rem;
+        font-weight: 600;
+        line-height: 100%;
+        color: $color-text-on-dark;
+
+        &::after {
+          content: '';
+          position: relative;
+          margin: 0 15px;
+          display: block;
+          width: 10px;
+          height: 1px;
+          background-color: #fff;
+          opacity: 0.2;
+        }
+
+        &_active {
+          font-size: 1.5rem;
+          font-family: 'Mulish', sans-serif;
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 100%;
+
+          &::after {
+            width: 70px;
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+
+    &__scroll {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &::after {
+        content: '';
+        position: relative;
+        display: block;
+        margin-top: 0.75rem;
+        width: 1px;
+        height: 10px;
+        opacity: 0.2;
+        background: $color-text-on-dark;
+      }
+
+      span {
+        font-family: 'Mulish', sans-serif;
+        font-size: 0.875rem;
+        line-height: 160%;
+        color: #fff;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+      }
+    }
+
+    &__buttons,
+    &__scroll {
+      padding-right: 6.125rem;
+
+      @include breakpoint($tab_1248) {
+        padding-right: 2.5rem;
+      }
+    }
+  }
+}
