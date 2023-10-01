@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('../../public/images/wave_vector.svg');
+  background: url('images/wave_vector.svg');
 
   @include breakpoint($tab_1248) {
     padding: 6.25rem 0.938rem;
@@ -60,6 +60,7 @@
     }
 
     &_email {
+      position: relative;
       margin-right: 1.25rem;
       width: 478px;
 
@@ -67,7 +68,11 @@
         width: 100%;
       }
 
-      input {
+      @include breakpoint($tab_600) {
+        margin-right: 0;
+      }
+
+      input[type='email'] {
         width: 100%;
         padding: 0.875rem 0.875rem 0.875rem 1.875rem;
         background-color: transparent;
@@ -81,6 +86,23 @@
           color: $color-text-on-dark;
         }
       }
+
+      input[type='submit'] {
+        display: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 15px;
+        width: 20px;
+        height: 20px;
+        min-width: 20px;
+        background-color: transparent;
+        background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.5' clip-path='url(%23clip0_1655_2653)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M18.8636 1.13636C19.1565 1.42925 19.1565 1.90412 18.8636 2.19702L9.69696 11.3637C9.40406 11.6566 8.92919 11.6566 8.6363 11.3637C8.3434 11.0708 8.3434 10.5959 8.6363 10.303L17.803 1.13636C18.0959 0.843464 18.5707 0.843464 18.8636 1.13636Z' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M18.8636 1.13632C19.0674 1.34005 19.1364 1.64247 19.0412 1.91441L13.2079 18.5811C13.1063 18.8713 12.8378 19.0702 12.5305 19.0827C12.2233 19.0952 11.9395 18.9189 11.8146 18.6379L8.59843 11.4015L1.36203 8.18534C1.08102 8.06045 0.904718 7.77667 0.917253 7.46941C0.929789 7.16215 1.12862 6.89368 1.41887 6.79209L18.0855 0.958753C18.3575 0.863574 18.6599 0.932588 18.8636 1.13632ZM3.69994 7.58293L9.47123 10.148C9.64091 10.2234 9.77658 10.359 9.85199 10.5287L12.417 16.3L17.1108 2.88912L3.69994 7.58293Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1655_2653'%3E%3Crect width='20' height='20' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+
+        @include breakpoint($tab_600) {
+          display: block;
+        }
+      }
     }
 
     &_submit {
@@ -92,6 +114,10 @@
         color: #fff;
         background: $gradient-button;
         cursor: pointer;
+
+        @include breakpoint($tab_600) {
+          display: none;
+        }
       }
     }
 

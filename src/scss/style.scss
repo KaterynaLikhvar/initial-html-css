@@ -4,6 +4,9 @@
 @import 'fonts.scss';
 
 @import 'header.scss';
+@import 'mobile-menu.scss';
+@import 'footer.scss';
+
 @import 'hero.scss';
 @import 'services-section.scss';
 @import 'social-links.scss';
@@ -11,7 +14,6 @@
 @import 'intouch-section.scss';
 @import 'products-section.scss';
 @import 'blog-section.scss';
-@import 'footer.scss';
 
 html {
   font-size: 16px;
@@ -141,6 +143,11 @@ button {
     line-height: 120%;
     letter-spacing: 1.2px;
     color: #ffffff;
+
+    @include breakpoint($tab_1024) {
+      margin-bottom: 1.185rem;
+      font-size: 2.25rem;
+    }
   }
 
   &__text {
@@ -151,9 +158,15 @@ button {
     font-weight: 400;
     line-height: 140%;
     color: $color-text-on-dark;
+
+    @include breakpoint($tab_1024) {
+      margin-bottom: 3.125rem;
+      font-size: 1.25rem;
+    }
   }
 
   &__button {
+    display: block;
     padding: 0.75rem 2.5rem;
     text-align: center;
     font-size: 1rem;
