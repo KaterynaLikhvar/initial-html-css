@@ -8,7 +8,7 @@
   }
 
   @include breakpoint($tab_1024) {
-    padding: 11.5rem 1.25rem 5.115rem 1.25rem;
+    padding: 11.5rem 1.25rem 3.115rem 1.25rem;
   }
 
   .page-title {
@@ -31,8 +31,7 @@
       }
 
       @include breakpoint($tab_1024) {
-        font-size: 8.125rem;
-        left: -5%;
+        font-size: 7.125rem;
       }
     }
   }
@@ -45,15 +44,6 @@
     @include breakpoint($tab_1918) {
       padding-left: 0;
       padding-right: 1.25rem;
-    }
-
-    &__wrap {
-      display: flex;
-      justify-content: space-between;
-
-      @include breakpoint($tab_1024) {
-        flex-direction: column;
-      }
     }
 
     &__subtitle {
