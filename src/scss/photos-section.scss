@@ -20,6 +20,7 @@
 
     @include breakpoint($tab_1024) {
       font-size: 3.75rem;
+      left: -20px;
     }
 
     &::after {
@@ -31,6 +32,7 @@
 
       @include breakpoint($tab_1024) {
         font-size: 8.125rem;
+        left: -5%;
       }
     }
   }

@@ -9,6 +9,7 @@
 @import 'social-links.scss';
 @import 'photos-section.scss';
 @import 'intouch-section.scss';
+@import 'products-section.scss';
 @import 'footer.scss';
 
 html {
@@ -91,6 +92,10 @@ button {
 
 .section-content {
   width: 456px;
+
+  @include breakpoint($tab_1248) {
+    width: 100%;
+  }
 
   &__title {
     position: relative;
@@ -274,5 +279,18 @@ button {
     font-weight: 400;
     line-height: 160%;
     color: $color-text-on-dark;
+  }
+}
+
+.products,
+.services {
+  .section-content {
+    &__subtitle {
+      @include breakpoint($tab_1024) {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 120%;
+      }
+    }
   }
 }

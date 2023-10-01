@@ -1,0 +1,175 @@
+:root {
+  --b: 6px;
+}
+
+.products {
+  display: flex;
+
+  @include breakpoint($tab_1024) {
+    flex-direction: column;
+  }
+
+  &__left {
+    position: relative;
+    @include breakpoint($tab_1024) {
+      margin-bottom: 7.875rem;
+    }
+  }
+
+  .page-title {
+    @include breakpoint($tab_1248) {
+      font-size: 3.75rem;
+    }
+
+    @include breakpoint($tab_600) {
+      transform: translate(-42%, 750%) rotate(270deg);
+    }
+
+    &::after {
+      @include breakpoint($tab_1248) {
+        font-size: 8.125rem;
+      }
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+
+    @include breakpoint($tab_1024) {
+      height: 800px;
+      overflow: hidden;
+    }
+
+    @include breakpoint($tab_600) {
+      height: 593px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__right {
+    padding: 0 0.938rem;
+    margin: auto;
+  }
+
+  .section-content {
+    max-width: 780px;
+    width: 100%;
+
+    @include breakpoint($tab_1248) {
+      width: 80%;
+    }
+
+    @include breakpoint($tab_1024) {
+      width: 100%;
+    }
+
+    &__items {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 50px 90px;
+
+      @include breakpoint($tab_1248) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &__item {
+      display: grid;
+      grid-template-columns: 105px 1fr;
+      grid-gap: 0 28px;
+
+      &-title {
+        grid-column: 2;
+        grid-row: 1;
+        font-family: 'Raleway';
+        font-size: 1.25rem;
+        font-weight: 600;
+        line-height: 150%;
+      }
+
+      &-text {
+        grid-column: 2;
+        grid-row: 2;
+        width: 213px;
+        font-size: 1rem;
+        line-height: 160%;
+        color: $color-text-on-dark;
+      }
+    }
+
+    &__chart {
+      grid-column: 1;
+      grid-row: 1 / 3;
+      position: relative;
+      min-width: 104px;
+      --w: 104px;
+      width: var(--w);
+      height: var(--w);
+      display: block;
+      place-content: center;
+      margin: 0 auto;
+      font-size: 25px;
+      font-weight: bold;
+      font-family: sans-serif;
+      transform: rotate(120deg);
+
+      &::before {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        inset: 0;
+        background:
+          radial-gradient(farthest-side, $color-red 98%, #0000) top/var(--b) var(--b) no-repeat,
+          conic-gradient($color-red calc(var(--p) * 1%), rgba(255, 255, 255, 0.1) 0%);
+        -webkit-mask: radial-gradient(
+          farthest-side,
+          #0000 calc(99% - var(--b)),
+          #000 calc(100% - var(--b))
+        );
+        mask: radial-gradient(
+          farthest-side,
+          #0000 calc(99% - var(--b)),
+          #000 calc(100% - var(--b))
+        );
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        inset: calc(50% - var(--b) / 2);
+        background: $color-red;
+        transform: rotate(calc(var(--p) * 3.6deg)) translateY(calc(50% - var(--w) / 2));
+      }
+
+      &-text {
+        position: absolute;
+        display: flex;
+        align-items: flex-end;
+        top: 31%;
+        left: 29%;
+        transform: rotate(240deg);
+        text-align: center;
+        width: min-content;
+        font-size: 1.625rem;
+        line-height: 120%;
+        font-weight: 400;
+
+        span {
+          &:last-of-type {
+            font-size: 1rem;
+            font-weight: 300;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
