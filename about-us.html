@@ -8,10 +8,7 @@
   <body>
     {{> header}}
     <main class="main">
-      <div class="wrapper">
-        {{> breadcrumbs}}
-        <span class="page-title page-title_first" data-content="About us">About us</span>
-      </div>
+      <div class="wrapper">{{> breadcrumbs}} {{> about-us_hero }} {{> slider }}</div>
     </main>
     {{> footer}}
     <script type="module" src="/src/ts/about-us.ts"></script>

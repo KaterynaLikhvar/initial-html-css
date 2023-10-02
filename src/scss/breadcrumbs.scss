@@ -1,10 +1,12 @@
 .breadcrumbs {
   margin-left: auto;
+  margin-bottom: 2.75rem;
   padding: 5.125rem 24.375rem 4.5rem 0;
   display: flex;
   width: fit-content;
 
   @include breakpoint($tab_1248) {
+    margin-bottom: 0;
     padding: 10.275rem 24.375rem 4.5rem 0;
   }
 

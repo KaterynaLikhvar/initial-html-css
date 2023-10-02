@@ -7,35 +7,221 @@
 @import 'mobile-menu.scss';
 @import 'footer.scss';
 @import 'common-styles.scss';
+@import 'social-links.scss';
 
 @import 'breadcrumbs.scss';
+@import 'photos-section.scss';
 
 .header {
   position: relative;
 }
 
-.page-title {
-  color: #fff;
-  font-size: 3.75rem;
-  transform: translate(120%, 90%) rotate(0);
+.hero {
+  display: flex;
 
-  @include breakpoint($tab_1024) {
-    font-size: 2.25rem;
-    transform: translate(8%, 82%) rotate(0);
+  @include breakpoint($tab_1496) {
+    padding-right: 0.938rem;
   }
 
-  &::after {
-    top: -82%;
-    left: -132%;
+  @include breakpoint($tab_1248) {
+    padding: 4.375rem 0 0;
+    flex-direction: column-reverse;
+  }
+
+  .section-content {
+    padding-top: 7.5rem;
+    padding-left: 9.125rem;
+    max-width: 600px;
+    width: 100%;
+
+    @include breakpoint($tab_1248) {
+      margin-bottom: 6.25rem;
+      padding: 0 0.938rem 0;
+      max-width: 100%;
+    }
+
+    &__subtitle {
+      font-size: 2.5rem;
+      letter-spacing: normal;
+    }
+
+    &__text {
+      margin-bottom: 1.875rem;
+    }
+
+    &__items {
+      margin-top: 4.375rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 40px;
+
+      @include breakpoint($tab_1248) {
+        margin-top: 3.75rem;
+      }
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+
+      @include breakpoint($tab_1248) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      &-value {
+        position: relative;
+        margin-right: 1rem;
+        display: flex;
+        align-items: center;
+        font-size: 3rem;
+        font-weight: 500;
+        line-height: 130%;
+        color: $color-red;
+
+        &::after {
+          content: '+';
+          position: relative;
+          display: block;
+          font-size: 1.5rem;
+          font-weight: 500;
+          line-height: 130%;
+        }
+      }
+
+      &-title {
+        width: 50%;
+        font-size: 0.75rem;
+        font-weight: 700;
+        line-height: 160%;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        color: #fff;
+      }
+    }
+  }
+
+  .page-title {
     color: #fff;
-    opacity: 0.05;
-    font-size: 11.25rem;
-    white-space: nowrap;
+    font-size: 3.75rem;
+    transform: translate(120%, 90%) rotate(0);
 
     @include breakpoint($tab_1024) {
-      top: -114%;
-      left: -12%;
-      font-size: 4.375rem;
+      font-size: 2.25rem;
+      transform: translate(8%, 82%) rotate(0);
+    }
+
+    &::after {
+      top: -82%;
+      left: -132%;
+      color: #fff;
+      opacity: 0.05;
+      font-size: 11.25rem;
+      white-space: nowrap;
+
+      @include breakpoint($tab_1024) {
+        top: -114%;
+        left: -12%;
+        font-size: 4.375rem;
+      }
+    }
+  }
+}
+
+.photos-section {
+  overflow: hidden;
+
+  @include breakpoint($tab_1360) {
+    padding: 11.5rem 1rem 10.213rem 1rem;
+  }
+
+  @include breakpoint($tab_1024) {
+    padding: 8.125rem 1rem 6.213rem 1rem;
+  }
+
+  .page-title {
+    transform: translate(278%, 576%) rotate(270deg);
+
+    @include breakpoint($tab_1360) {
+      position: absolute;
+      transform: translate(0, 0) rotate(0deg);
+      top: unset;
+      bottom: 0;
+      left: 15px;
+    }
+
+    @include breakpoint($tab_1024) {
+      bottom: 50px;
+      left: -3px;
+    }
+
+    &::after {
+      @include breakpoint($tab_1360) {
+        left: -3%;
+      }
+    }
+  }
+
+  &__container {
+    @include breakpoint($tab_1360) {
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    @include breakpoint($tab_1024) {
+      margin-top: 3.125rem;
+      flex-direction: row;
+    }
+  }
+
+  &__image {
+    @include breakpoint($tab_1248) {
+      width: 370px;
+      min-width: 370px;
+    }
+
+    @include breakpoint($tab_1024) {
+      margin-right: 1rem;
+    }
+
+    &:last-of-type {
+      @include breakpoint($tab_1024) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .slider-buttons {
+    display: flex;
+  }
+
+  .slider-button {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='31' height='12' viewBox='0 0 31 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30.5303 6.53033C30.8232 6.23744 30.8232 5.76256 30.5303 5.46967L25.7574 0.696699C25.4645 0.403806 24.9896 0.403806 24.6967 0.696699C24.4038 0.989593 24.4038 1.46447 24.6967 1.75736L28.9393 6L24.6967 10.2426C24.4038 10.5355 24.4038 11.0104 24.6967 11.3033C24.9896 11.5962 25.4645 11.5962 25.7574 11.3033L30.5303 6.53033ZM0 6.75H30V5.25H0V6.75Z' fill='%2326272C'/%3E%3C/svg%3E%0A");
+
+    &:disabled {
+      background-image: url("data:image/svg+xml,%3Csvg width='31' height='12' viewBox='0 0 31 12' fill='none' opacity='0.3' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30.5303 6.53033C30.8232 6.23744 30.8232 5.76256 30.5303 5.46967L25.7574 0.696699C25.4645 0.403806 24.9896 0.403806 24.6967 0.696699C24.4038 0.989593 24.4038 1.46447 24.6967 1.75736L28.9393 6L24.6967 10.2426C24.4038 10.5355 24.4038 11.0104 24.6967 11.3033C24.9896 11.5962 25.4645 11.5962 25.7574 11.3033L30.5303 6.53033ZM0 6.75H30V5.25H0V6.75Z' fill='%2326272C'/%3E%3C/svg%3E%0A");
+    }
+
+    &__prev {
+      margin-right: 2.5rem;
+      transform: rotate(180deg);
+    }
+  }
+
+  .section-content {
+    &__subtitle {
+      @include breakpoint($tab_1360) {
+        margin-bottom: 1.185rem;
+        font-size: 2rem;
+      }
+    }
+    &__wrap {
+      align-items: baseline;
     }
   }
 }
