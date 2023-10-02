@@ -1,0 +1,59 @@
+.breadcrumbs {
+  margin-left: auto;
+  margin-bottom: 2.75rem;
+  padding: 5.125rem 24.375rem 4.5rem 0;
+  display: flex;
+  width: fit-content;
+
+  @include breakpoint($tab_1248) {
+    margin-bottom: 0;
+    padding: 10.275rem 24.375rem 4.5rem 0;
+  }
+
+  @include breakpoint($tab_1024) {
+    padding: 5.375rem 0.938rem 0 0;
+  }
+
+  &__wrapper {
+    margin-left: auto;
+    padding-right: 24.375rem;
+    display: flex;
+    width: fit-content;
+  }
+
+  &__point {
+    position: relative;
+    margin-left: 1.25rem;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 160%;
+    color: $color-text-on-dark;
+
+    &:first-child {
+      margin-left: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: relative;
+      display: block;
+      margin-right: 1.25rem;
+      width: 10px;
+      height: 1px;
+      min-width: 10px;
+      background-color: #fff;
+      opacity: 0.2;
+    }
+  }
+
+  a {
+    &:hover {
+      color: #fff;
+    }
+  }
+}

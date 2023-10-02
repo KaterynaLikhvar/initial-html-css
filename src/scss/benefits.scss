@@ -1,0 +1,71 @@
+.services {
+  padding: 9.375rem 1.875rem 9.375rem 15.625rem;
+  width: calc(100% + 140px);
+  margin-left: -140px;
+  background: url('images/wave_vector.svg') 0% 100%;
+  background-repeat: no-repeat;
+  filter: drop-shadow(20px -30px 70px rgba(0, 0, 0, 0.2));
+
+  @include breakpoint($tab_1360) {
+    flex-direction: column;
+    padding: 9.375rem 0 9.375rem;
+  }
+
+  @include breakpoint($tab_1024) {
+    width: 100%;
+    margin-left: 0;
+    padding: 8.125rem 0.938rem;
+  }
+
+  .section-content {
+    margin-right: 8.125rem;
+
+    @include breakpoint($tab_1360) {
+      margin-right: 0;
+      margin-bottom: 3.625rem;
+      width: 50%;
+    }
+
+    @include breakpoint($tab_1024) {
+      width: 100%;
+    }
+  }
+}
+
+.content-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+
+  @include breakpoint($tab_1024) {
+    grid-template-columns: 1fr;
+    width: auto;
+  }
+
+  &__item {
+    position: relative;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding: 3.125rem 4.25rem;
+
+    &::before {
+      display: none;
+    }
+    &:nth-child(even) {
+      top: -3.125rem;
+
+      @include breakpoint($tab_1360) {
+        top: unset;
+        left: 4.25;
+      }
+    }
+  }
+
+  &__image {
+    margin: 0 auto 2.875rem;
+  }
+
+  &__title {
+    text-align: center;
+  }
+}

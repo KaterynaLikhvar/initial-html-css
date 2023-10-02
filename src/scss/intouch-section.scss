@@ -5,7 +5,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('images/wave_vector.svg');
+  background: url('images/wave_vector.svg') 0% 100%;
+  background-repeat: no-repeat;
 
   @include breakpoint($tab_1248) {
     padding: 6.25rem 0.938rem;

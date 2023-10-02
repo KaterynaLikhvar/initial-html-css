@@ -5,6 +5,18 @@ export default {
   plugins: [
     handlebars({
       partialDirectory: resolve(__dirname, 'partials'),
+      context(pagePath) {
+        return pageData[pagePath];
+      },
     }),
   ],
+};
+
+const pageData = {
+  '/index.html': {
+    title: 'Main Page',
+  },
+  '/about-us.html': {
+    title: 'About us Page',
+  },
 };
