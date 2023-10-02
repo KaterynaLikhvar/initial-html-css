@@ -1,0 +1,100 @@
+.photos-section {
+  position: relative;
+  padding: 11.5rem 0 1.25rem 1.25rem;
+  background-color: #fff;
+
+  @include breakpoint($tab_1918) {
+    padding: 11.5rem 0 6.213rem 1.25rem;
+  }
+
+  @include breakpoint($tab_1024) {
+    padding: 11.5rem 1.25rem 3.115rem 1.25rem;
+  }
+
+  .page-title {
+    transform: translate(402%, 620%) rotate(270deg);
+
+    @include breakpoint($tab_1918) {
+      position: relative;
+    }
+
+    @include breakpoint($tab_1024) {
+      font-size: 3.75rem;
+      left: -20px;
+    }
+
+    &::after {
+      top: -124%;
+
+      @include breakpoint($tab_1918) {
+        top: 22%;
+      }
+
+      @include breakpoint($tab_1024) {
+        font-size: 7.125rem;
+      }
+    }
+  }
+
+  .section-content {
+    padding-left: 23.125rem;
+    padding-right: 17.5rem;
+    width: 100%;
+
+    @include breakpoint($tab_1918) {
+      padding-left: 0;
+      padding-right: 1.25rem;
+    }
+
+    &__subtitle {
+      color: $color-text;
+    }
+  }
+
+  .view-all__button {
+    margin-bottom: 1.875rem;
+
+    @include breakpoint($tab_1024) {
+      margin-bottom: 3.75rem;
+    }
+
+    span {
+      color: $color-text;
+
+      &::after {
+        background-image: url("data:image/svg+xml,%3Csvg width='31' height='12' viewBox='0 0 31 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.8' d='M30.5303 6.53033C30.8232 6.23744 30.8232 5.76256 30.5303 5.46967L25.7574 0.696699C25.4645 0.403806 24.9896 0.403806 24.6967 0.696699C24.4038 0.989593 24.4038 1.46447 24.6967 1.75736L28.9393 6L24.6967 10.2426C24.4038 10.5355 24.4038 11.0104 24.6967 11.3033C24.9896 11.5962 25.4645 11.5962 25.7574 11.3033L30.5303 6.53033ZM0 6.75H30V5.25H0V6.75Z' fill='%2326272C'/%3E%3C/svg%3E%0A");
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+
+    @include breakpoint($tab_1024) {
+      flex-direction: column;
+    }
+  }
+
+  &__image {
+    display: block;
+    margin-right: 1rem;
+    // max-width: 480px;
+    // width: 100%;
+
+    @include breakpoint($tab_1024) {
+      margin-right: 0;
+      margin-bottom: 1.25rem;
+      width: 100%;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
