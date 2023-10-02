@@ -1,0 +1,15 @@
+@import 'normalize.scss';
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'fonts.scss';
+
+@import 'header.scss';
+@import 'mobile-menu.scss';
+@import 'footer.scss';
+@import 'common-styles.scss';
+
+@import 'breadcrumbs.scss';
+
+.header {
+  position: relative;
+}
