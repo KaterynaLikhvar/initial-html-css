@@ -4,6 +4,10 @@
   display: flex;
   width: fit-content;
 
+  @include breakpoint($tab_1248) {
+    padding: 10.275rem 24.375rem 4.5rem 0;
+  }
+
   @include breakpoint($tab_1024) {
     padding: 5.375rem 0.938rem 0 0;
   }
