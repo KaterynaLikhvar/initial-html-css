@@ -128,6 +128,17 @@
       line-height: 170%;
       text-transform: capitalize;
       border: 2px solid rgba(255, 255, 255, 0.5);
+      color: #fff;
+
+      &:hover {
+        cursor: pointer;
+        border: 2px solid rgba(255, 255, 255, 1);
+      }
+
+      &:active,
+      &:focus {
+        border: 2px solid rgba(255, 255, 255, 0.5);
+      }
     }
   }
 }
