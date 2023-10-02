@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services</title>
+  </head>
+  <body>
+    {{> header}}
+    <main class="main">
+      <div class="wrapper">
+        <div class="breadcrumbs">
+          <a href="/" class="breadcrumbs__point">Home</a>
+          <span class="breadcrumbs__point breadcrumbs__point_current">Services</span>
+          <span class="page-title page-title_first" data-content="Services">Services</span>
+        </div>
+        {{> services_hero}}
+      </div>
+    </main>
+    {{> footer}}
+    <script type="module" src="/src/ts/services.ts"></script>
+  </body>
+</html>
